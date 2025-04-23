@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor Game</title>
+</head>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      align-content:center ;
+      height: 100vh;
+      gap: 10px;
+      background:linear-gradient(rgb(86, 28, 247), rgb(81, 133, 245));
+    }
+
+    h1{
+      color: rgb(38, 0, 143);
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    button{
+      width: 10%;
+      height: 5vh;
+      font-size: 1.2em;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      box-shadow: 5px 5px 20px 0px white;
+    }
+
+
+    .resultDive{
+      width: 100%;
+      height: 30vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .finalResult{
+      width: 35%;
+      height: 12vh;
+      border: none;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.5em;
+      text-wrap: wrap;
+      align-content: center;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      padding: 10px;
+      box-shadow: 5px 10px 10px black;
+
+    }
+
+  </style>
+
+<body>
+  
+
+  <h1>Rock Paper Scissor Game</h1>
+
+  <button onclick="rock()">Rock</button>
+  <button onclick="paper()">Paper</button>
+  <button onclick="scissor()">Scissor</button>
+  <br>
+  <div class="resultDive">
+    <p class="finalResult">Choose one of the Above</p>
+  </div>
+  <script>
+
+
+
+    
+    
+    function rock(){
+    let randomNum = Math.random()
+    var computerMove = "";
+    let result = " ";
+
+  
+    
+    if(randomNum <= 0.3 ){
+      computerMove = "Rock"
+    } else if(randomNum <= 0.6){
+      computerMove = "Paper"
+    } else{
+      computerMove = "Scissor"
+    }
+    
+    
+    if(computerMove === "Rock"){
+      result = "Match draw"
+    } else if(computerMove === "Paper"){
+      result = "You loss"
+    } else if(computerMove === "Scissor"){
+      result = "You Win"
+    }
+    let text = document.getElementsByTagName("p")[0]
+
+    text.innerHTML = `You choose ROCK. computer choose ${computerMove.toUpperCase()} and ${result}.`;
+    console.log(text.value)
+    
+  }
+
+
+
+
+  function paper(){
+    let randomNum = Math.random()
+    var computerMove = "";
+    let result = " ";
+
+  
+    
+    if(randomNum <= 0.3 ){
+      computerMove = "Rock"
+    } else if(randomNum <= 0.6){
+      computerMove = "Paper"
+    } else{
+      computerMove = "Scissor"
+    }
+    
+    
+    if(computerMove === "Rock"){
+      result = "You win"
+    } else if(computerMove === "Paper"){
+      result = "Match draw"
+    } else if(computerMove === "Scissor"){
+      result = "you loss"
+    }
+    let text = document.getElementsByTagName("p")[0]
+
+    text.innerHTML = `You choose PAPER. computer choose ${computerMove.toUpperCase()} and ${result}.`;
+    console.log(text.value)
+  }
+    
+
+
+
+  
+  function scissor(){
+    let randomNum = Math.random()
+    var computerMove = "";
+    let result = " ";
+
+  
+    
+    if(randomNum <= 0.3 ){
+      computerMove = "Rock"
+    } else if(randomNum <= 0.6){
+      computerMove = "Paper"
+    } else{
+      computerMove = "Scissor"
+    }
+    
+    
+    if(computerMove === "Rock"){
+      result = "You loss"
+    } else if(computerMove === "Paper"){
+      result = "You win"
+    } else if(computerMove === "Scissor"){
+      result = "Match draw"
+    }
+    let text = document.getElementsByTagName("p")[0]
+
+    text.innerHTML = `You choose SCISSOR. computer choose ${computerMove.toUpperCase()} and ${result}.`;
+    console.log(text.value)
+  }
+
+
+  </script>
+</body>
+</html>
